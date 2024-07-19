@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Artiq</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Verdana&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+            color: black;
+        }
+        
+        :root {
+            --primary-color: #009970;
+            --background-color: whitesmoke;
+            --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--background-color);
+            padding: 20px;
+        }
+        
+        #wrapper {
+            background-color: white;
+            padding: 40px 60px;
+            border-radius: 16px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: whitesmoke;
+            padding: 0.5rem 1rem;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .navbar-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .navbar-links a:hover {
+            color: #007a58;
+        }
+        
+        #header-banner-div img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .inputBox {
+            position: relative;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        
+        .inputBox input,
+        .inputBox textarea {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            color: #333;
+            font-size: 1em;
+        }
+        
+        .inputBox textarea {
+            height: 100px;
+            resize: none;
+        }
+        
+        .inputBox label {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            pointer-events: none;
+            color: #999;
+            transition: 0.3s ease-in-out;
+            background: white;
+            padding: 0 5px;
+        }
+        
+        .inputBox input:focus ~ label,
+        .inputBox input:valid ~ label,
+        .inputBox textarea:focus ~ label,
+        .inputBox textarea:valid ~ label {
+            top: -10px;
+            left: 10px;
+            color: var(--primary-color);
+            font-size: 0.85em;
+        }
+        
+        .inputBox input:focus,
+        .inputBox textarea:focus,
+        .inputBox input:valid,
+        .inputBox textarea:valid {
+            border-color: var(--primary-color);
+        }
+        
+        .inputBox input[type="submit"] {
+            background: var(--primary-color);
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .inputBox input[type="submit"]:hover {
+            background: #007a58;
+        }
+        
+        footer {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            background-color: whitesmoke;
+            padding: 10px 0;
+            border-radius: 16px;
+        }
+        
+        footer img {
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        
+        footer p {
+            color: #666;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://raw.githubusercontent.com/Elainemontesa/WD_Final-Project/main/WD_Logo.png" alt="Logo">
+            </a>
+            <div class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="login.html">Log In</a>
+            </div>
+        </nav>
+        
+        <header id="header-banner-div">
+            <img src="https://raw.githubusercontent.com/Elainemontesa/WD_Final-Project/main/WD_Banner.png" alt="Header Banner">
+        </header>
+        
+        <main class="contact-form">
+            <h2>Contact Us</h2><br>
+            <form action="https://formsubmit.co/montesa.elaine@gmail.com" method="POST">
+                <div class="inputBox">
+                    <input type="text" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="inputBox">
+                    <textarea name="message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Send Message">
+                </div>
+            </form>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <img src="https://raw.githubusercontent.com/Elainemontesa/WD_Final-Project/main/WD_Logo.png" alt="Logo">
+            <p>&copy; Elaine Montesa | montesa.elaine@gmail.com</p>
+        </footer>
+    </div>
+</body>
+</html>

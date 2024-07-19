@@ -1,0 +1,361 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+:root {
+    --primary-color: #009970;
+    --secondary-color: #005a40;
+    --background-color: whitesmoke;
+    --text-color: #333;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#wrapper {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    border-radius: 16px;
+    padding: 0.5rem;
+    height: 80px;
+    margin: 20px;
+    font-size: 17px;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #009970;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.login-button {
+    background: #009970;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background: #00b383;
+}
+
+.navbar-toggler,
+.btn-close {
+    border: none;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007a58;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: #009970;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+#header-banner-div {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    margin-top: 10%;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+#main-div {
+    width: 100%;
+    min-height: 470px;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.offcanvas-header {
+    background-color: #009970;
+    color: white;
+}
+
+/*Side Bar*/
+#Sidebar-div {
+    width: 5%;
+    min-height: 470px;
+    padding: 1rem;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    float: left;
+}
+
+.stickyicon-list {
+    position: fixed;
+    top: 200px;
+    transform: translateY(-50%);
+}
+
+.stickyicon-list a {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: 35px;
+}
+
+.stickyicon-list a:hover {
+    color: #000;
+    width: 10px;
+}
+
+.facebook,
+.instagram {
+    background: whitesmoke;
+    color: white;
+}
+/*
+.hero-section {
+    background: url(WD_Background.gif) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+}
+
+.hero-section::before {
+    background: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-section .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    margin-left: 5%;
+}
+
+.hero-section h1 {
+    font-size: 1.5em;
+}
+*/
+
+/*For About & Portfolio*/
+h1 {
+    font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+    font-size: 36px;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.github-link {
+    font-size: 20px;
+    color: var(--primary-color);
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.github-link:hover {
+    background-color: #007a58;
+    color: white;
+}
+
+.content,
+.about {
+    width: 100%;
+    float: right;
+    flex: 1 1 75%;
+    background-color: #009970;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    color: white;
+}
+
+#Image1-div,
+#Image2-div,
+#Image3-div,
+#Image4-div,
+#Image5-div {
+    width: 15%;
+    text-align: center;
+    min-height: 100px;
+    float: left;
+    margin: 1.66%;
+}
+
+#Image1-div img,
+#Image2-div img,
+#Image3-div img,
+#Image4-div img,
+#Image5-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/*About Me*/
+#about h3 {
+    color: var(--primary-color);
+    margin: 30px 0 10px;
+    text-align: center;
+}
+
+#about p {
+    color: var(--text-color);
+    margin: 30px 0 10px;
+    text-align: center;
+}
+
+#technical-skills {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.skill-bar div {
+    width: 0;
+    height: 30px;
+    border-radius: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    transition: width 1s;
+}
+
+/*Portfolio*/
+#portfolio h1 {
+    color: var(--primary-color);
+    margin: 30px 0 10px;
+    text-align: center;
+}
+
+#portfolio h2, #portfolio h4 {
+    color: white;
+    text-align: center;
+    margin: 30px 0 10px;
+}
+
+#portfolio p {
+    color: var(--text-color);
+    margin: 30px 0 10px;
+    text-align: center;
+}
+
+
+/*Responsiveness*/
+@media (max-width: 767px) {
+    .col-md-4,
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-4,
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-4,
+    .col-md-6 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+
+    .col-md-4.offset-md-4,
+    .col-md-6.offset-md-3 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Footer Section*/
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: whitesmoke;
+    padding: 10px 0;
+    border-radius: 16px;
+}
+
+footer img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #666;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
