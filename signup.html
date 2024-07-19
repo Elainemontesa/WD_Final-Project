@@ -123,17 +123,10 @@
         form p a:hover {
             text-decoration: underline;
         }
-
-        #notification {
-            display: none;
-            margin-top: 20px;
-            color: var(--primary-color);
-            font-size: 1em;
-        }
     </style>
 </head>
 <body>
-    <form id="signupForm" action="https://formsubmit.co/montesa.elaine@gmail.com" method="POST">
+    <form action="https://formspree.io/f/mvgpgbll" method="POST">
         <h2>Create New Account</h2>
         <div class="inputBox">
             <input type="text" name="username" required>
@@ -155,31 +148,6 @@
             <input type="submit" value="Create">
         </div>
         <p>Already have an Account? <a href="login.html">Login</a></p>
-        <div id="notification">Account created successfully!</div>
     </form>
-
-    <script>
-        document.getElementById('signupForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-
-            const form = event.target;
-            const formData = new FormData(form);
-
-            const response = await fetch(form.action, {
-                method: form.method,
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                form.reset();
-                document.getElementById('notification').style.display = 'block';
-            } else {
-                alert('There was a problem creating your account. Please try again.');
-            }
-        });
-    </script>
 </body>
 </html>
